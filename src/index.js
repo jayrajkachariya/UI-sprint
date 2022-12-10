@@ -1,34 +1,37 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation
-} from "react-router-dom";
+import { Suspense, lazy, StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import classes from './Index.module.css'
 
-import "./index.css";
-import Main from "./Main";
-import ECommerceApp from "./components/e-commerce-app";
-import PageNotFoundComponent from "./components/PageNotFoundComponent";
-
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+const Main = lazy(() => import('./components/Main'))
+const ECommerceApp = lazy(() => import('./components/e-commerce-app'))
+const OnlineLearningPlatform = lazy(() =>
+  import('./components/online-learning-platform')
+)
+const PageNotFoundComponent = lazy(() =>
+  import('./components/PageNotFoundComponent')
+)
 
 const App = () => {
-  const location = useLocation();
-  console.log(location.pathname);
-
   return (
-    <div className="container">
-      <Routes>
-        <Route path="" element={<Main />} />
-        <Route path="e-commerce-app" element={<ECommerceApp />} />
-        <Route path="*" element={<PageNotFoundComponent />} />
-      </Routes>
+    <div className={classes.container}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="" element={<Main />} />
+          <Route path="e-commerce-app" element={<ECommerceApp />} />
+          <Route
+            path="online-learning-platform"
+            element={<OnlineLearningPlatform />}
+          />
+          <Route path="*" element={<PageNotFoundComponent />} />
+        </Routes>
+      </Suspense>
     </div>
-  );
-};
+  )
+}
+
+const rootElement = document.getElementById('root')
+const root = createRoot(rootElement)
 
 root.render(
   <StrictMode>
@@ -36,4 +39,4 @@ root.render(
       <App />
     </Router>
   </StrictMode>
-);
+)

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
+* {
+  font-family: 'Space Grotesk', sans-serif;
+  --color-black: #050404;
+  --color-orange: #ff6a28;
+  --color-purple: #5d3af3;
+  --color-yellow: #fcbc30;
+  --color-blue: #0066fe;
+  --color-pink: #ecb0fd;
+  --color-white: #e1e1e1;
+}
+
+.container {
+  height: 100vh;
+  background: var(--color-black);
+}
+
+.headerItem {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 3rem 4rem 3rem 0;
+  display: flex;
+}
+
+.textContent {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 3rem 4rem 2rem 0;
+  display: flex;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  padding-left: 5rem;
+}
+
+.headerRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--color-white);
+}
+
+.mlauto {
+  margin-left: auto;
+}
+
+.textLarge {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.textBlue {
+  color: var(--color-blue);
+}
+
+.contentArea {
+  flex: 1;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.contentLeft {
+  flex: 1;
+  padding: 7rem 5rem 2rem;
+}
+
+.contentRight {
+  flex: 1;
+  padding: 5.5rem 2rem 2rem 10rem;
+}
+
+.button {
+  outline: none;
+  border: 1px solid var(--color-white);
+  border-radius: 3rem;
+  padding: 1.8rem 2.5rem;
+  font-size: 1.2rem;
+  color: var(--color-white);
+  background: transparent;
+  width: 80%;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.button:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.colorStrip {
+  height: 6rem;
+  margin-bottom: 1.8em;
+  border-radius: 3rem;
+  opacity: 0.7;
+}
+
+.colorStrip1 {
+  margin-right: -3rem;
+  background: linear-gradient(
+    140deg,
+    var(--color-black) 59%,
+    var(--color-purple) 100%
+  );
+}
+
+.colorStrip2 {
+  margin-right: 30%;
+  background: linear-gradient(
+    140deg,
+    var(--color-black) 49%,
+    var(--color-pink) 100%
+  );
+}
+
+.colorStrip3 {
+  margin-left: 30%;
+  background: linear-gradient(
+    90deg,
+    var(--color-yellow) 12%,
+    var(--color-black) 86%
+  );
+}
+
+.colorStrip4 {
+  margin-right: 10%;
+  background: linear-gradient(
+    40deg,
+    var(--color-black) 19%,
+    var(--color-orange) 81%
+  );
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 48;
+}
