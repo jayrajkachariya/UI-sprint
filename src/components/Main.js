@@ -9,15 +9,6 @@ export default function Main() {
     <div className={classes.p20}>
       <Header className={[classes.mb3, classes.font32]}>UI Sprint</Header>
       <div className={classes.container}>
-        <StyledLink to="/e-commerce-app">
-          <Catalogue
-            title="Ecommerce App Concept"
-            designedBy="Mehedi Hasan Rownock"
-            designerURL="https://dribbble.com/Mehedi_Hasan"
-            img="e-commerce-app.webp"
-            imageAlt="e-commerce-app"
-          />
-        </StyledLink>
         <StyledLink to="/online-learning-platform">
           <Catalogue
             title="Online Learning Platform"
@@ -25,6 +16,15 @@ export default function Main() {
             designerURL="https://dribbble.com/solomiakr"
             img="online-learning-platform.webp"
             imageAlt="online-learning-platform"
+          />
+        </StyledLink>
+        <StyledLink to="/e-commerce-app">
+          <Catalogue
+            title="Ecommerce App Concept"
+            designedBy="Mehedi Hasan Rownock"
+            designerURL="https://dribbble.com/Mehedi_Hasan"
+            img="e-commerce-app.webp"
+            imageAlt="e-commerce-app"
           />
         </StyledLink>
       </div>
