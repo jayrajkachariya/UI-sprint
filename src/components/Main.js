@@ -1,32 +1,48 @@
-import StyledLink from './common/Link'
+import StyledLink from './common/StyledLink'
 import classes from './Main.module.css'
 import { lazy } from 'react'
-const Header = lazy(() => import('./common/Header'))
 const Catalogue = lazy(() => import('./common/Catalogue'))
 
+const PROJECTS = [
+  {
+    link: '/online-learning-platform',
+    title: 'Online Learning Platform',
+    designedBy: 'Solomia Kravets 👽',
+    designerURL: 'https://dribbble.com/solomiakr',
+    designURL: 'https://dribbble.com/shots/16550027--online-learning-platform',
+    img: 'online-learning-platform.webp',
+    imageAlt: 'online-learning-platform',
+  },
+  {
+    link: '/e-commerce-app',
+    title: 'Ecommerce App Concept',
+    designedBy: 'Mehedi Hasan Rownock',
+    designerURL: 'https://dribbble.com/Mehedi_Hasan',
+    designURL: 'https://dribbble.com/shots/7501261-Ecommerce-App-Concept',
+    img: 'e-commerce-app.webp',
+    imageAlt: 'e-commerce-app',
+  },
+]
+
 export default function Main() {
+  function onVisitURL(URL) {
+    return function () {
+      window.open(URL)
+    }
+  }
   return (
     <div className={classes.p20}>
-      <Header className={[classes.mb3, classes.font32]}>UI Sprint</Header>
+      <div className={classes.header}>UI tries...</div>
       <div className={classes.container}>
-        <StyledLink to="/online-learning-platform">
-          <Catalogue
-            title="Online Learning Platform"
-            designedBy="Solomia Kravets 👽"
-            designerURL="https://dribbble.com/solomiakr"
-            img="online-learning-platform.webp"
-            imageAlt="online-learning-platform"
-          />
-        </StyledLink>
-        <StyledLink to="/e-commerce-app">
-          <Catalogue
-            title="Ecommerce App Concept"
-            designedBy="Mehedi Hasan Rownock"
-            designerURL="https://dribbble.com/Mehedi_Hasan"
-            img="e-commerce-app.webp"
-            imageAlt="e-commerce-app"
-          />
-        </StyledLink>
+        {PROJECTS.map((project) => (
+          <div className={classes.gridItem} key={project.imageAlt}>
+            <Catalogue
+              {...project}
+              onVisitDesign={onVisitURL(project.designURL)}
+              onVisitDesigner={onVisitURL(project.designerURL)}
+            />
+          </div>
+        ))}
       </div>
     </div>
   )

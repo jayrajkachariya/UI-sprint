@@ -10,7 +10,7 @@ export const MobileView = styled('div')`
 
 export const AppContainer = styled('div')`
   height: 100vh;
-  background: #ffcc00;
+  background: #ffc83f;
   padding: 40px;
   flex: 1;
   display: flex;
@@ -31,7 +31,7 @@ export const UserIcon = styled('div')`
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background-image: url('profile_pic.svg');
+  background: url('profile_pic.svg'), #ffc83f;
   background-size: 50px;
 `
 

@@ -1,0 +1,67 @@
+.thumbnailContainer {
+  width: 100%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: linear-gradient(90deg, #ffffff, #f4f4f4);
+}
+
+.thumbnailImage {
+  text-align: center;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 16px;
+  margin: 16px;
+  margin-bottom: 0;
+}
+
+.secondaryHeader {
+  color: #767676;
+  margin-top: 4px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: ease-in-out 0.1s;
+}
+
+.secondaryHeader:hover {
+  color: #474647;
+  /* border-bottom: 1px solid #797979; */
+}
+
+.mx2 {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.my1 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cardFooter {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+}
+
+.cardFooterText {
+  text-align: right;
+  margin-right: 16px;
+}
+
+.button {
+  outline: none;
+  background: #1e1e1e;
+  border-radius: 1rem;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  color: #eee;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  height: 48px;
+}
