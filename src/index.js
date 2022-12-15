@@ -8,25 +8,25 @@ const ECommerceApp = lazy(() => import('./components/e-commerce-app'))
 const OnlineLearningPlatform = lazy(() =>
   import('./components/online-learning-platform')
 )
+const StocksPortfolio = lazy(() => import('./components/stocks-portfolio'))
 const PageNotFoundComponent = lazy(() =>
   import('./components/PageNotFoundComponent')
 )
 
 const App = () => {
   return (
-    <div className={classes.container}>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="" element={<Main />} />
-          <Route path="e-commerce-app" element={<ECommerceApp />} />
-          <Route
-            path="online-learning-platform"
-            element={<OnlineLearningPlatform />}
-          />
-          <Route path="*" element={<PageNotFoundComponent />} />
-        </Routes>
-      </Suspense>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="" element={<Main />} />
+        <Route path="e-commerce-app" element={<ECommerceApp />} />
+        <Route
+          path="online-learning-platform"
+          element={<OnlineLearningPlatform />}
+        />
+        <Route path="stocks-portfolio" element={<StocksPortfolio />} />
+        <Route path="*" element={<PageNotFoundComponent />} />
+      </Routes>
+    </Suspense>
   )
 }
 

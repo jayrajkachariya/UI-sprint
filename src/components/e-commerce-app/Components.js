@@ -31,7 +31,7 @@ export const UserIcon = styled('div')`
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background: url('profile_pic.svg'), #ffc83f;
+  background: url('profile-pic.svg'), #ffc83f;
   background-size: 50px;
 `
 

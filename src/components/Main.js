@@ -1,4 +1,3 @@
-import StyledLink from './common/StyledLink'
 import classes from './Main.module.css'
 import { lazy } from 'react'
 const Catalogue = lazy(() => import('./common/Catalogue'))
@@ -21,6 +20,15 @@ const PROJECTS = [
     designURL: 'https://dribbble.com/shots/7501261-Ecommerce-App-Concept',
     img: 'e-commerce-app.webp',
     imageAlt: 'e-commerce-app',
+  },
+  {
+    link: '/stocks-portfolio',
+    title: 'Stocks Portfolio',
+    designedBy: 'Jayraj Kachariya',
+    designerURL: 'https://dribbble.com/jayraj_kachariya',
+    designURL: 'https://dribbble.com/shots/7501261-Ecommerce-App-Concept',
+    img: 'stocks-portfolio.webp',
+    imageAlt: 'stocks-portfolio',
   },
 ]
 

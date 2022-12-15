@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;900&display=swap');
+
+* {
+  font-family: 'Inconsolata', monospace;
+  --color-red-dark: #ec0000;
+  --color-green-dark: #1ad500;
+}
+
+.darkMode {
+  --bg-secondary: #2d2d2d !important;
+  --color: #c1c1c1 !important;
+  --bg: #1e1e1e !important;
+  transition: 0.3s;
+}
+
+.lightMode {
+  --bg-secondary: #d5d5d5 !important;
+  --color: #000000 !important;
+  --bg: #f7f7f7 !important;
+  transition: 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: var(--color);
+  background: var(--bg);
+  font-size: 14px;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 8px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+}
+
+.table {
+  max-height: 89vh !important;
+  overflow-y: auto;
+  text-align: right;
+}
+
+.shortTable {
+  max-height: 50vh !important;
+  overflow-y: auto;
+  text-align: right;
+}
+
+table,
+td,
+th {
+  border: 0;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 4px 8px;
+}
+
+th {
+  cursor: pointer;
+  user-select: none;
+  color: var(--color);
+  z-index: 1;
+  padding: 8px;
+  font-size: 16px;
+  background-color: var(--bg) !important;
+}
+
+.activeCell {
+  background: var(--color-green-dark);
+  color: var(--bg) !important;
+  font-weight: bold;
+}
+
+.inActiveCell {
+}
+
+table {
+  border-radius: 2px;
+  min-width: 100%;
+}
+
+tr {
+  margin-top: 1px !important;
+}
+
+.tableRowActive {
+  background-color: var(--bg);
+}
+
+.textAlignLeft {
+  text-align: right;
+}
+
+.textAlignRight {
+  text-align: right;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+.cursorSelect {
+  cursor: inherit;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  margin: 8px;
+}
+
+.cardValue {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 16px 16px;
+}
+
+.cardLabel {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 16px 16px 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.colorNegative {
+  color: var(--color-red-dark);
+}
+
+.colorPositive {
+  color: var(--color-green-dark);
+}
+
+.colorNormal {
+  color: var(--color);
+}
+
+.toggleContainer {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  margin-top: 16px;
+}
+
+.toggleContainer > .text {
+  font-size: 16px;
+  margin: 0 8px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.toggle:before {
+  position: absolute;
+  content: '';
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--bg-secondary);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .toggle:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+/* Rounded toggles */
+.toggle.round {
+  border-radius: 16px;
+}
+
+.toggle.round:before {
+  border-radius: 50%;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
