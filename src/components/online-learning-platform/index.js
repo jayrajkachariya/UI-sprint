@@ -1,6 +1,7 @@
 import classes from './OnlineLearningPlatform.module.css'
 
 export default function OnlineLearningPlatform(params) {
+  document.title = 'Online Learning Platform'
   return (
     <div className={classes.container}>
       <div className={classes.header}>

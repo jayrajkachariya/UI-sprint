@@ -2,21 +2,23 @@
 
 * {
   font-family: 'Inconsolata', monospace;
-  --color-red-dark: #ec0000;
-  --color-green-dark: #1ad500;
 }
 
 .darkMode {
   --bg-secondary: #2d2d2d !important;
   --color: #c1c1c1 !important;
   --bg: #1e1e1e !important;
+  --color-red-dark: #ec0000;
+  --color-green-dark: #1ad500;
   transition: 0.3s;
 }
 
 .lightMode {
-  --bg-secondary: #d5d5d5 !important;
+  --bg-secondary: #e4e4e4 !important;
   --color: #000000 !important;
   --bg: #f7f7f7 !important;
+  --color-red-dark: #990000;
+  --color-green-dark: #0c6100;
   transition: 0.3s;
 }
 

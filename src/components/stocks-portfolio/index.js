@@ -20,20 +20,29 @@ export default function StocksPortfolio() {
   const [selectedData, setSelectedData] = useState([])
   const [inverted, setInverted] = useState(true)
   const [activeSymbol, setActiveSymbol] = useState('')
-  const [isDarkMode, setIsDarkMode] = useState(true)
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem('isDarkMode') === 'true' ? true : false
+  )
   const totalProfit = useRef(
     DATA.reduce((acc, curr) => acc + curr['Taxable Profit'], 0).toFixed(2)
   )
 
   useEffect(() => {
+    document.title = 'Stock Portfolio'
     let result = Object.values(aggregatedDataForCollapsedView())
     setAggregatedData(result)
     setTimeout(onCellClick({ key: 'Symbol', value: result[0]['Symbol'] }))
+    return () => {}
   }, [])
 
   const onToggleChange = () => setIsFullTableView((prev) => !prev)
 
-  const onThemeChange = () => setIsDarkMode((prev) => !prev)
+  const onThemeChange = () => {
+    setIsDarkMode((prev) => {
+      localStorage.setItem('isDarkMode', !prev)
+      return !prev
+    })
+  }
 
   const onSort = (key, from) => {
     return () => {
@@ -131,7 +140,12 @@ export default function StocksPortfolio() {
               left="Collapsed View"
               right="Full View"
             />
-            <Toggle onToggleChange={onThemeChange} left="🌙" right="🌞" />
+            <Toggle
+              value={isDarkMode}
+              onToggleChange={onThemeChange}
+              right="🌙"
+              left="🌞"
+            />
           </div>
         </div>
       </div>

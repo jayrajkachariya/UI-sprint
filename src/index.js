@@ -15,7 +15,13 @@ const PageNotFoundComponent = lazy(() =>
 
 const App = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className={classes.fullFlexCenter}>
+          <img src="loading.svg" alt="Loading..." />
+        </div>
+      }
+    >
       <Routes>
         <Route path="" element={<Main />} />
         <Route path="e-commerce-app" element={<ECommerceApp />} />

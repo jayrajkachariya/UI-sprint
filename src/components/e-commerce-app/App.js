@@ -1,4 +1,4 @@
-import Text from "../common/Text";
+import Text from '../common/Text'
 import {
   HeaderText,
   MobileView,
@@ -6,10 +6,11 @@ import {
   NavigationContainer,
   UserIcon,
   LocationContainer,
-  LocationImage
-} from "./Components";
+  LocationImage,
+} from './Components'
 
 export default function App() {
+  document.title = 'Ecommerce App Concept'
   return (
     <MobileView>
       <LandingPageTopHalf>
@@ -31,5 +32,5 @@ export default function App() {
         </LocationContainer>
       </LandingPageTopHalf>
     </MobileView>
-  );
+  )
 }
