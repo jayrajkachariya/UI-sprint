@@ -1,0 +1,33 @@
+* {
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  min-width: 100px;
+  min-height: 24px;
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 2px;
+  cursor: text;
+}
+
+.selectedCell {
+  min-width: 100px;
+  min-height: 24px;
+  border: 2px solid rgb(0, 34, 255);
+  text-align: left;
+  padding: 2px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}

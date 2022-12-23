@@ -9,6 +9,8 @@ const OnlineLearningPlatform = lazy(() =>
   import('./components/online-learning-platform')
 )
 const StocksPortfolio = lazy(() => import('./components/stocks-portfolio'))
+const StocksAnalytics = lazy(() => import('./components/stocks-analytics'))
+const Sheet = lazy(() => import('./components/sheet'))
 const PageNotFoundComponent = lazy(() =>
   import('./components/PageNotFoundComponent')
 )
@@ -30,6 +32,8 @@ const App = () => {
           element={<OnlineLearningPlatform />}
         />
         <Route path="stocks-portfolio" element={<StocksPortfolio />} />
+        <Route path="sheet" element={<Sheet />} />
+        <Route path="stocks-analytics" element={<StocksAnalytics />} />
         <Route path="*" element={<PageNotFoundComponent />} />
       </Routes>
     </Suspense>

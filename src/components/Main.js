@@ -21,14 +21,32 @@ const PROJECTS = [
     img: 'e-commerce-app.webp',
     imageAlt: 'e-commerce-app',
   },
+  // {
+  //   link: '/stocks-portfolio',
+  //   title: 'Stocks Portfolio',
+  //   designedBy: 'Jayraj Kachariya',
+  //   designerURL: 'https://dribbble.com/jayraj_kachariya',
+  //   designURL: 'https://dribbble.com/shots/7501261-Ecommerce-App-Concept',
+  //   img: 'stocks-portfolio.webp',
+  //   imageAlt: 'stocks-portfolio',
+  // },
+  // {
+  //   link: '/sheet',
+  //   title: 'Sheet',
+  //   designedBy: 'Jayraj Kachariya',
+  //   designerURL: 'https://dribbble.com/jayraj_kachariya',
+  //   designURL: 'https://dribbble.com/shots/7501261-Ecommerce-App-Concept',
+  //   img: 'sheet.webp',
+  //   imageAlt: 'sheet',
+  // },
   {
-    link: '/stocks-portfolio',
-    title: 'Stocks Portfolio',
+    link: '/stocks-analytics',
+    title: 'Stocks Analytics',
     designedBy: 'Jayraj Kachariya',
     designerURL: 'https://dribbble.com/jayraj_kachariya',
     designURL: 'https://dribbble.com/shots/7501261-Ecommerce-App-Concept',
-    img: 'stocks-portfolio.webp',
-    imageAlt: 'stocks-portfolio',
+    img: 'stocks-analytics.svg',
+    imageAlt: 'stocks-analytics',
   },
 ]
 
@@ -40,7 +58,10 @@ export default function Main() {
   }
   return (
     <div className={classes.p20}>
-      <div className={classes.header}>UI tries...</div>
+      <div className={classes.header}>
+        <img src="code-icon.svg" alt="logo" className={classes.logo} />
+        <div>uiDictionary</div>
+      </div>
       <div className={classes.container}>
         {PROJECTS.map((project) => (
           <div className={classes.gridItem} key={project.imageAlt}>
